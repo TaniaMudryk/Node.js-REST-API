@@ -10,6 +10,7 @@ const contactSchema = joi.object({
 const userSchema = joi.object({
   email: joi.string().email(),
   password: joi.string(),
+  subscription: joi.string().valid("starter", "pro", "business"),
 });
 
 module.exports = { contactSchema, userSchema };
